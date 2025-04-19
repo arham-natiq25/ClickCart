@@ -2,6 +2,7 @@
 
 use App\Models\GeneralSetting;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Str;
 
 /** Set Sidebar item active */
 
@@ -124,7 +125,10 @@ function getFinalPayableAmount(){
 
 function limitText($text, $limit = 20)
 {
-    return \Str::limit($text, $limit);
+    if (strlen($text) > $limit) {
+        return substr($text, 0, $limit) . '...';
+    }
+    return $text;
 }
 
 function getCurrencyIcon()

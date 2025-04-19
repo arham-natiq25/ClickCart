@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 
 @section('title')
-{{$settings->site_name}} || Payment
+{{$settings->site_name}} || Vendor
 @endsection
 
 @section('content')
