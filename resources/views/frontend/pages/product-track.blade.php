@@ -1,7 +1,7 @@
 @extends('frontend.layouts.master')
 
 @section('title')
-{{$settings->site_name}} || About
+{{$settings->site_name}} || Order Tracking
 @endsection
 
 @section('content')
